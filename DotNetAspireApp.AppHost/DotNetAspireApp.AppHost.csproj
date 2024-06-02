@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,7 +11,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotNetAspireApp.ApiService\DotNetAspireApp.ApiService.csproj" />
+    <ProjectReference Include="..\DotNetAspireApp.WebAPINativeAOT\DotNetAspireApp.WebAPINativeAOT.csproj" />
+    <ProjectReference Include="..\DotNetAspireApp.WebAPI\DotNetAspireApp.WebAPI.csproj" />
     <ProjectReference Include="..\DotNetAspireApp.Web\DotNetAspireApp.Web.csproj" />
+    <ProjectReference Include="..\ReactFullStack\ReactFullStack.Server\ReactFullStack.Server.csproj" />
   </ItemGroup>
 
   <ItemGroup>

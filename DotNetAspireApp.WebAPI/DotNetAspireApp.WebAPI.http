@@ -1,0 +1,6 @@
+@DotNetAspireApp.WebAPI_HostAddress = http://localhost:5236
+
+GET {{DotNetAspireApp.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

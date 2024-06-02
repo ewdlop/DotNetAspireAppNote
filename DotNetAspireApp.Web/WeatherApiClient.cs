@@ -1,25 +1,28 @@
+using System.Runtime.CompilerServices;
+
 namespace DotNetAspireApp.Web;
 
 public class WeatherApiClient(HttpClient httpClient)
 {
     public async Task<WeatherForecast[]> GetWeatherAsync(int maxItems = 10, CancellationToken cancellationToken = default)
     {
-        List<WeatherForecast>? forecasts = null;
+        return (await httpClient.GetFromJsonAsync<WeatherForecast[]>("/weatherforecast", cancellationToken: cancellationToken)) ?? [];
+    }
 
-        await foreach (var forecast in httpClient.GetFromJsonAsAsyncEnumerable<WeatherForecast>("/streamdata", cancellationToken))
+    public async IAsyncEnumerable<WeatherForecast[]> GetWeatherStreamDataAsync(int maxItems = 10, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    {
+
+        await foreach (var forecasts in httpClient.GetFromJsonAsAsyncEnumerable<WeatherForecast[]>("/api/stream", cancellationToken))
         {
-            if (forecasts?.Count >= maxItems)
+            if (cancellationToken.IsCancellationRequested)
             {
-                break;
+                yield break;
             }
-            if (forecast is not null)
+            if (forecasts is not null)
             {
-                forecasts ??= [];
-                forecasts.Add(forecast);
+                yield return forecasts;
             }
         }
-
-        return forecasts?.ToArray() ?? [];
     }
 }
 

@@ -12,9 +12,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp.Web", "DotN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp.Tests", "DotNetAspireApp.Tests\DotNetAspireApp.Tests.csproj", "{FA9D1BFD-F352-474F-9939-705B18A0C10E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetAspireApp.BlazorAuto", "DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto.csproj", "{2B1E7CDA-1AB7-4CA4-88BD-7F54126A84F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp.BlazorAuto", "DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto.csproj", "{2B1E7CDA-1AB7-4CA4-88BD-7F54126A84F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetAspireApp.BlazorAuto.Client", "DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto.Client\DotNetAspireApp.BlazorAuto.Client.csproj", "{B30C76F1-5F96-46D5-A63E-60A340F72F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp.BlazorAuto.Client", "DotNetAspireApp.BlazorAuto\DotNetAspireApp.BlazorAuto.Client\DotNetAspireApp.BlazorAuto.Client.csproj", "{B30C76F1-5F96-46D5-A63E-60A340F72F5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp,BlazorWASM", "DotNetAspireApp,BlazorWASM\DotNetAspireApp,BlazorWASM\DotNetAspireApp,BlazorWASM.csproj", "{481DC17C-5412-4189-8648-5D173A7BEBC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp,BlazorWASM.Client", "DotNetAspireApp,BlazorWASM\DotNetAspireApp,BlazorWASM.Client\DotNetAspireApp,BlazorWASM.Client.csproj", "{E19B0943-CAB2-4D16-98CE-6B95DE7CDD0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetAspireApp.WebAPINativeAOT", "DotNetAspireApp.WebAPINativeAOT\DotNetAspireApp.WebAPINativeAOT.csproj", "{7C6CB193-2443-4E77-9F9B-0640A831C5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetAspireApp.WebAPI", "DotNetAspireApp.WebAPI\DotNetAspireApp.WebAPI.csproj", "{A97DBE3D-4487-45A3-8075-A8772DAA888C}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "dotnetaspireapp.reacttypescript", "DotNetAspireApp.ReactTypescript\dotnetaspireapp.reacttypescript.esproj", "{89803945-0AC8-4B28-864F-0DA121F54AAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactFullStack.Server", "ReactFullStack\ReactFullStack.Server\ReactFullStack.Server.csproj", "{23DBE5CB-6E55-44C8-AF99-ED8FF3F8F48D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactfullstack.client", "ReactFullStack\reactfullstack.client\reactfullstack.client.esproj", "{F7605397-40E1-42CC-AB66-579E86D65F3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +64,38 @@ Global
 		{B30C76F1-5F96-46D5-A63E-60A340F72F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B30C76F1-5F96-46D5-A63E-60A340F72F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B30C76F1-5F96-46D5-A63E-60A340F72F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{481DC17C-5412-4189-8648-5D173A7BEBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481DC17C-5412-4189-8648-5D173A7BEBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481DC17C-5412-4189-8648-5D173A7BEBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481DC17C-5412-4189-8648-5D173A7BEBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E19B0943-CAB2-4D16-98CE-6B95DE7CDD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E19B0943-CAB2-4D16-98CE-6B95DE7CDD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E19B0943-CAB2-4D16-98CE-6B95DE7CDD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E19B0943-CAB2-4D16-98CE-6B95DE7CDD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6CB193-2443-4E77-9F9B-0640A831C5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6CB193-2443-4E77-9F9B-0640A831C5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6CB193-2443-4E77-9F9B-0640A831C5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6CB193-2443-4E77-9F9B-0640A831C5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A97DBE3D-4487-45A3-8075-A8772DAA888C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97DBE3D-4487-45A3-8075-A8772DAA888C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97DBE3D-4487-45A3-8075-A8772DAA888C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97DBE3D-4487-45A3-8075-A8772DAA888C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89803945-0AC8-4B28-864F-0DA121F54AAF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{23DBE5CB-6E55-44C8-AF99-ED8FF3F8F48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DBE5CB-6E55-44C8-AF99-ED8FF3F8F48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DBE5CB-6E55-44C8-AF99-ED8FF3F8F48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DBE5CB-6E55-44C8-AF99-ED8FF3F8F48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7605397-40E1-42CC-AB66-579E86D65F3B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
