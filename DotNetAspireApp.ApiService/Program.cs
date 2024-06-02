@@ -29,9 +29,37 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 });
 
+app.MapGet("/streamdata", async (HttpContext httpContext) =>
+{
+    // Set the response content type
+    httpContext.Response.ContentType = "application/json";
+
+    // Use an async enumerator to stream the data
+    foreach (var item in GetData())
+    {
+        // Write each item to the response stream
+        await httpContext.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(item));
+        // Add a newline for better readability
+        await httpContext.Response.WriteAsync("\n");
+    }
+});
+
 app.MapDefaultEndpoints();
 
 app.Run();
+
+static IEnumerable<WeatherForecast> GetData()
+{
+    for (int i = 0; i < new Random().Next(1, 100); i++)
+    {
+        yield return new WeatherForecast
+        (
+            DateOnly.FromDateTime(DateTime.Now.AddDays(i)),
+            Random.Shared.Next(-20, 55),
+            "Random"
+        );
+    }
+}
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {

@@ -2,8 +2,6 @@
 @attribute [StreamRendering(true)]
 @attribute [OutputCache(Duration = 5)]
 
-@inject WeatherApiClient WeatherApi
-
 <PageTitle>Weather</PageTitle>
 
 <h1>Weather</h1>
@@ -39,11 +37,4 @@ else
     </table>
 }
 
-@code {
-    private WeatherForecast[]? forecasts;
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await WeatherApi.GetWeatherAsync();
-    }
-}
