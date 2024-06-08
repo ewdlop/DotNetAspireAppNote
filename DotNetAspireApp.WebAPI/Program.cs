@@ -5,7 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+//Sawgger issue in .Net 9
+//https://github.com/dotnet/aspnetcore/issues/54599
+
+//Might not have good UI representation
 builder.Services.AddSwaggerGen();
+//builder.Services.AddOpenAI();
+
 builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
    .AddNegotiate();
 
@@ -20,8 +27,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    //Sawgger issue in .Net 9
+    //https://github.com/dotnet/aspnetcore/issues/54599
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    //app.MapOpenAI();
 }
 
 app.UseHttpsRedirection();
